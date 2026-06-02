@@ -34,7 +34,7 @@ int main()
 
     return 0;
 
-    /*
+    /* AI USED CHATGPT
     Q1) Was the code correct? Yes it was correct as it was able complete all of the required requirements in the assignment.
     it was able to ask the user for a word, able to display the 4th character, find the length of the word, and removed the last two characters from the word.
     Q2)Was it readable and properly commented? Yes it was readable but it was lightly commented which meant there were very few comments to read through.
