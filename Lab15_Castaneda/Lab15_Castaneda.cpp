@@ -1,0 +1,23 @@
+/*
+Julian Castaneda
+June 11, 2026
+Lab 15, recursive functions, built-in functions
+*/
+#include <iostream>
+#include "Lab15_Functions_castaneda.cpp"
+
+using namespace std;
+int main(){
+    cout<<"\n------- EXAMPLE 1: Recursive function -------\n";
+    cheers(3);
+    cout<<"\n------- EXAMPLE 2: Recursive function to find the summation of a number -------\n";
+    int s = summation(5);
+    cout<<s<<endl;
+    cout<<"\n------- EXAMPLE 3: use recursive function to validate a number -------\n";
+    int num = getPositiveNumber();
+    cout<<"Collected number: "<<num<<endl;
+    
+
+
+    return 0;
+}

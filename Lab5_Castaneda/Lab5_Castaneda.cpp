@@ -65,18 +65,7 @@ int main(){
     wordd.erase(wordd.length() - 2, 2);
     cout<<"After removing two characters from the end: "<<wordd<<endl;
     cout<<"------------------------------"<<endl;
-
-
-
-
-
-
-
-
-
-
-
-
+        
 
     return 0;
 
