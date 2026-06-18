@@ -14,7 +14,7 @@ void filluparray(int *arr, int &numberuserindex, int sizearray){
     do{
         cout<<"Enter a positive number: ";
         cin>>number;
-        if (number>0);{
+        if (number>0){
             arr[index] = number;
             index++;
         }
@@ -54,4 +54,73 @@ void intro2darray(){
     };
     // accessing to a value in a 2d array
     cout<<"The temperature in 1st row, 2nd column"<<temperature[0][1]<<endl;
+}
+//EXAMPLE 3: Print each value in a 2d array.
+// The size of the column HAS to be passed in a 2d array.
+// int arr[][3] --> int(*arr)[3]
+void printarray(int arr[][3], int rows){
+    for(int r = 0; r<rows; r++){
+        for(int c = 0; c<3; c++){
+            cout<<arr[r][c]<<"\t";
+        }
+        cout<<endl;
+    }
+}
+// Example 4; 2d array application
+// Function to find and return the average of students grade
+// 2d set up : row --> student, column --> subjects.
+// 2d array of 3 students and 4 subjects per student
+void studentaverage(int (*arr)[4], int sizestudents, int sizesubjects, int *avg){
+    int index = 0;
+    for(int r = 0; r<sizestudents; r++){
+        int sum = 0;
+        for(int c = 0; c<sizesubjects; c++){
+            sum += arr[r][c];
+        }
+        //cout<<"Student "<<r+1<<" Average grade "<<(sum/sizesubjects)<<endl;
+        avg[index] = sum/sizesubjects;
+        index++;
+    }
+}
+//function to prin the average of each student
+void printavg(int *avg, int sizestudents){
+    for(int i=0; i<sizestudents; i++){
+        cout<<"Student "<<i+1<<" average grade = "<<avg[i]<<endl;
+    }
+}
+//EXERCISE A
+int findMin(int *arr, int size){
+    int min = arr[0];
+    for(int i = 1; i<size; i++){
+        if(arr[i]<min)
+            min = arr[i];
+    }
+    return min;
+}
+// EXERCISE B
+void popArray2D(int(*arr)[5]){
+    for(int r = 0; r<5; r++){
+        for(int c = 0; c<5; c++){
+            arr[r][c] = rand()%255+1;
+        
+        }
+    }
+}
+void printarray2D(int(*arr)[5]){
+    for(int r = 0; r<5; r++){
+        for(int c = 0; c<5; c++){
+            cout<<arr[r][c]<<"\t";
+        }
+        cout<<endl;
+    }
+}
+int range2D(int (*arr)[5], int min, int max){
+    int count = 0;
+    for(int r = 0; r<5; r++){
+        for(int c = 0; c<5; c++){
+            if(arr[r][c] >= min && arr[r][c]<= max)
+                count++;
+        }
+    }
+    return count;
 }
